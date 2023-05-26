@@ -32,7 +32,7 @@ ul {
   margin: 0;
 }
 
-button,
+button, 
 a {
   user-select: none;
   -webkit-user-select: none;
@@ -47,6 +47,7 @@ header {
   border-bottom: 2px solid var(--color-active);
   background-repeat:no-repeat;
 }
+
 
 nav>ul {
   display: flex;
@@ -109,6 +110,7 @@ h3 {
   margin: 8px 0;
   font-size: 16px;
   font-weight: 600;
+  text-align: center;
 }
 
 main section {
@@ -135,17 +137,6 @@ main p {
   margin-bottom: 16px;
 }
 
-.txtPeliculas{
-  color: var(--color-active) ;
-  font-size: 12px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.poster{
-  width: 100%;
-  margin-bottom: 10pt;
-  border-radius: 15px;
-}
 
 /* Media Query: Estilos a aplicar sólo en pantallas mayores a 400px */
 @media (min-width: 400px) {

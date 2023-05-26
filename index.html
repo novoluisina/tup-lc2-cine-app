@@ -32,13 +32,14 @@
     <p id="txtagregarpeli">Agregar Película Favorita por Código</p>
     <section id="form-movie-new">
       <!--Seccion para agregar una palicula favorita por codigo-->
-      <form action="#" method="#" target="#">
+      <form action="#" method="#" target="#" class="form-container">
         <label for="codigopeli"></label>
         <input type="number" id="codigopeli" name="codigopeli">
         <label for="boton"></label>
         <input type="button" id="boton" value="Agregar">
       </form>
     </section>
+
     <section id="sec-messages">
       <!--Seccion para mensajes-->
       <p id="aviso_success" class="verde">Película agregada con éxito</p>
@@ -46,19 +47,27 @@
         consultar</p>
       <p id="aviso_warning" class="amarillo">La película ingresada ya se encuentra almacenada</p>
     </section>
+
     <section id="sec_peliculas">
       <!--Seccion visualizacion de peliculas-->
-      <div class="contenedorPeliculas" id="contenedorPeliculas">
-        <img class="poster" src="https://image.tmdb.org/t/p/w500//fcFMd3HdyX7r5gtFwVnn2qr5Yhq.jpg" alt="CreedIII">
-        <h3>Creed III</h3>
-        <p class="txtPeliculas">
-          <b>Código:</b> 677179 <br>
-          <b>Título original:</b> Creed III <br>
-          <b>Idioma original:</b> en <br>
-          <b>Año:</b> 2023.03.01 <br>
-          <a href="favorities.html" target="#">Agregar a Favoritos</a>
-        </p>
+      <div class="contenedorPeliculas" id="contenedorPeliculas"> 
+        <div class="contenedorPoster">
+          <img src="https://image.tmdb.org/t/p/w500//fcFMd3HdyX7r5gtFwVnn2qr5Yhq.jpg" alt="CreedIII">
+          <h3>Creed III</h3>
+          <div class="txtPeliculas">
+          <p>
+            <b>Código:</b> 677179 <br>
+            <b>Título original:</b> Creed III <br>
+            <b>Idioma original:</b> en <br>
+            <b>Año:</b> 2023.03.01 <br>
+          </p>
+        </div>
+          <button class="button radius">
+            <span>Agregar a Favoritos</span>
+          </button>
+        </div>
       </div>
+    
     </section>
     <section id="sec_paginador_peliculas">
       <!--Seccion de Paginacion-->

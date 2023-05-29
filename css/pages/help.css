@@ -29,6 +29,14 @@
     color: white;
     padding: 5px;
     border-radius: 5px;
+    margin-left: 3px;
+    width: 60px;
+    height: 35px;
+}
+
+.botones{
+    display: flex;
+    justify-content: center;
 }
 
 #sec_ayuda{

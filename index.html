@@ -6,11 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TUP LC2 - TP Integrador - Cine</title>
   <!-- Estilos CSS -->
+  <link rel="icon" href="img/cinema_popcorn.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/common.css" />
   <link rel="stylesheet" href="css/pages/index.css">
+  <script src="js/common.js" defer></script>
+  <script src="js/pages/index.js" defer></script>
 </head>
 
-<body>
+<body onload="mostrarPeliculas(`${paginaActual}`)">
   <header>
     <h1>
       <img src="img/IconoCine.png" alt="iconoHeader">
@@ -37,36 +40,41 @@
         <input type="number" id="codigopeli" name="codigopeli">
 
         <label for="boton"></label>
-        <input type="button" id="boton" value="Agregar">
+        <input type="button" id="boton" value="Agregar" onclick="validacionCodigo()">
       </form>
     </section>
 
+    <div class="loadMessage" id="spinnerDivCartelera" style="display: none;">
+      <p>Cargando películas... Aguarde un momento</p>
+      <img src="img/Spinner-1s-200px.gif" alt="spinner GIF">
+    </div>
+
     <section id="sec-messages">
       <!--Seccion para mensajes-->
-      <p id="aviso_success" class="verde">Película agregada con éxito</p>
-      <p id="aviso_error" class="rojo">Error: La Película seleccionada no se encuentra en la API o se produjo un error al
-        consultar</p>
-      <p id="aviso_warning" class="amarillo">La película ingresada ya se encuentra almacenada</p>
+      <!-- <p id="aviso_success" class="verde">Película agregada con éxito</p> -->
+      <!-- <p id="aviso_error" class="rojo">Error: La Película seleccionada no se encuentra en la API o se produjo un error al
+        consultar</p> -->
+      <!-- <p id="aviso_warning" class="amarillo">La película ingresada ya se encuentra almacenada</p> -->
     </section>
 
     <section id="sec_peliculas">
       <!--Seccion visualizacion de peliculas-->
       <div class="contenedorPeliculas" id="contenedorPeliculas"> 
-        <div class="contenedorPoster">
+        <!-- <div class="contenedorPoster">
           <img src="https://image.tmdb.org/t/p/w500//fcFMd3HdyX7r5gtFwVnn2qr5Yhq.jpg" alt="CreedIII">
           <h3>Creed III</h3>
           <div class="txtPeliculas">
-          <p>
-            <b>Código:</b> 677179 <br>
-            <b>Título original:</b> Creed III <br>
-            <b>Idioma original:</b> en <br>
-            <b>Año:</b> 2023.03.01 <br>
-          </p>
-        </div>
+            <p>
+              <b>Código:</b> 677179 <br>
+              <b>Título original:</b> Creed III <br>
+              <b>Idioma original:</b> en <br>
+              <b>Año:</b> 2023.03.01 <br>
+            </p>
+          </div>
           <button class="button radius">
             <span>Agregar a Favoritos</span>
           </button>
-        </div>
+        </div> -->
       </div>
     
     </section>
